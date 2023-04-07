@@ -38,12 +38,17 @@ class _HomeState extends State<Home> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Text(
+                      "Product Number: ${product.products?.id}",
+                      style: const TextStyle(
+                          fontSize: 30, fontWeight: FontWeight.bold),
+                    ),
+                    Text(
                       "${product.products?.title}",
                       style: const TextStyle(
                           fontSize: 30, fontWeight: FontWeight.bold),
                     ),
                     const SizedBox(
-                      height: 15,
+                      height: 30,
                     ),
                     Text(
                       "${product.products?.description}",
@@ -53,7 +58,7 @@ class _HomeState extends State<Home> {
                       ),
                     ),
                     const SizedBox(
-                      height: 30,
+                      height: 50,
                     ),
                     Row(
                       mainAxisAlignment:
