@@ -8,11 +8,11 @@ import 'package:http/http.dart' as http;
 String baseURL = 'https://dummyjson.com/products';
 String contentTypeHeader = "application/json";
 
-Future<Product?> getProduct() async {
+Future<Product?> getProduct(int currentPage) async {
   Product? result;
   try {
     final response = await http.get(
-      Uri.parse("$baseURL/1"),
+      Uri.parse("$baseURL/$currentPage"),
       headers: {
         HttpHeaders.contentTypeHeader: contentTypeHeader,
       },

@@ -16,8 +16,8 @@ class _HomeState extends State<Home> {
   void initState() {
     super.initState();
 
-    final product = Provider.of<ProductModel>(context, listen: false);
-    product.getProductData();
+    // call getProductdata to pull first record
+    Provider.of<ProductModel>(context, listen: false).getProductData();
   }
 
   @override
@@ -61,13 +61,15 @@ class _HomeState extends State<Home> {
                       children: <Widget>[
                         ElevatedButton(
                           onPressed: () {
-                            debugPrint('Do Previous');
+                            Provider.of<ProductModel>(context, listen: false)
+                                .decrementCurrentProduct();
                           },
                           child: const Text('< Previous'),
                         ),
                         ElevatedButton(
                           onPressed: () {
-                            debugPrint('Do Next');
+                            Provider.of<ProductModel>(context, listen: false)
+                                .incrementCurrentProduct();
                           },
                           child: const Text('Next >'),
                         )
