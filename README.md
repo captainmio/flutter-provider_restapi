@@ -14,3 +14,8 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+https://www.youtube.com/watch?v=FAQ6U-fh1xw&t=3s
+## Todo things
++ call service in the state class
++ use state class result and display it to front end
